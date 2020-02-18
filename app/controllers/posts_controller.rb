@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 class PostsController < ApplicationController
   before_action :authenticate_user!
 
@@ -8,23 +9,23 @@ class PostsController < ApplicationController
 
   def create
     @post = current_user.posts.create(post_params)
-    
+
     redirect_to posts_url
   end
 
   def update
     @post = Post.find(params[:id])
-      if @post.update_attributes(params.require(:post).permit(:message))
-          redirect_to action: :index
-          flash[:notice] = 'post was updated.'
-      else
-          render 'edit'
-      end
-    end    
-
-    def edit
-      @post = Post.find(params[:id])
+    if @post.update(params.require(:post).permit(:message))
+      redirect_to action: :index
+      flash[:notice] = 'post was updated.'
+    else
+      render 'edit'
     end
+  end
+
+  def edit
+    @post = Post.find(params[:id])
+  end
 
   def index
     @posts = Post.all
@@ -49,4 +50,4 @@ class PostsController < ApplicationController
   def delete_params
     params.require(:id)
   end
-end 
+end
