@@ -1,0 +1,2 @@
+class ProfilePost < ApplicationRecord
+end

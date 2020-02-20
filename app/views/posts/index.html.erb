@@ -16,7 +16,7 @@
   <body>
     <h1>Posts shown below</h1>
     <p>To view Your profile:
-    <%= link_to profile_path(current_user) do %>
+    <%= link_to profile_posts_path(current_user) do %>
       My Profile
     <% end %>
     </p>
@@ -33,7 +33,7 @@
             <p class="card-text">    
               <p><%= simple_format(post.message.gsub(/\n/, '<br/>')) %></p>
               <p><%= post.created_at.strftime(" Posted on %d %B %a %I:%M%p") %> </p>
-              <p> By <%= post.user.email %> <%= link_to profile_path(post.user) do %>
+              <p> By <%= post.user.email %> <%= link_to profile_post_path(post.user) do %>
                 View Profile
                       <% end %></p>
               <p>

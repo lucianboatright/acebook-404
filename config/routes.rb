@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  resources :profile_posts
+  
   get 'profile/show'
 
   devise_for :users
@@ -11,7 +13,6 @@ Rails.application.routes.draw do
   resources :posts do
     resources :users
   end
-  resources :profile
 
   root 'posts#index'
 end

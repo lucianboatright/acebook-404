@@ -1,3 +1,8 @@
+<h1>New Profile Post</h1>
+
+<%= render 'form', profile_post: @profile_post %>
+
+<%= link_to 'Back', profile_posts_path %>
 
 
 <!DOCTYPE html>
@@ -15,7 +20,7 @@
 </head>
   <body>
 
-    <h2>New Post 1</h2>
+    <h2>New Post 2</h2>
 
       <%= form_for @post do |form| %>
         <%= form.label :message %><br>
@@ -24,7 +29,7 @@
         <%= form.submit "Submit" %>
       <% end %>
 
-      <%= link_to 'Back', posts_path %>
+      <%= link_to 'Back', profile_path[:id] %>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> 
 
