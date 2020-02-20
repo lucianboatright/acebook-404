@@ -19,6 +19,7 @@
 
 /node_modules
 /yarn-error.log
-
+/coverage/.last_run.json
 /public/uploads/
 .byebug_history
+/coverage/.result.json

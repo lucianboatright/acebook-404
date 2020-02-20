@@ -1,27 +1,24 @@
 <%# <p id="notice"><%= notice %></p> 
 <h1>Albums</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @albums.each do |album| %>
-     <% album.images.each do |image| %>
-     <%= image_tag image.url %>
-        <td><%= album.title %></td>
-        <td><%= link_to 'Show', album %></td>
-        <td><%= link_to 'Edit', edit_album_path(album) %></td>
-        <td><%= link_to 'Destroy', album, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-    <% end %>
-  </tbody>
-</table>
+<% @albums.each do |album| %>
+  <div class='album-container'>
+    <div class='image-container'>
+      <div class='images'>
+        <% album.images.each_with_index do |image, index| %>
+            <%= image_tag(album.images_urls[index].to_s, alt: 'Image', class: 'thumb') if album.images?%>
+        <% end %>
+      </div>
+    </div>
+    <div class='links-container'>
+      <%= album.title %>
+      <%= link_to 'Show', album %>
+      <%= link_to 'Edit', edit_album_path(album) %>
+      <%= link_to 'Destroy', album, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
+  </div>
+  <br>
+<% end %>
 
 <br>
 

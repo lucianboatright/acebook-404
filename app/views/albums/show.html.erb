@@ -1,8 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <div>
-<% @album.images.each do |image| %>
+<% @album.images.each do |image, index| %>
 <%= image_tag(image.url) %>
+<%= link_to "Delete", album_path(@album, index), 
+:method => :delete, data: { confirm: "Are you sure you?" } %>
+
 <% end %>
 <p>
   <strong>Title:</strong>
