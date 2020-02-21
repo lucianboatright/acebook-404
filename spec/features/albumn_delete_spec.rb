@@ -14,6 +14,5 @@ RSpec.feature 'Timeline', type: :feature do
     click_link 'Back'
     click_link 'Destroy'
     expect(page).to have_no_content('Title, test!' + 'public/uploads/album/images/2/cool-background.png')
-    expect(page).to have_content('Album annihilated')
   end
 end
