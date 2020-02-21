@@ -34,7 +34,7 @@
           null,
           null,
           1,
-          1,
+          11,
           null,
           null,
           null,
@@ -43,7 +43,7 @@
           null,
           null,
           1,
-          1,
+          6,
           null,
           null,
           null,
@@ -52,15 +52,14 @@
           null,
           null,
           1,
-          0,
+          5,
+          5,
+          5,
+          8,
+          4,
           null,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
+          2,
+          1,
           null,
           null,
           null,
@@ -68,13 +67,13 @@
           null,
           null,
           1,
-          0,
-          0,
-          0,
-          0,
+          2,
+          2,
+          2,
+          1,
           null,
-          0,
-          0,
+          2,
+          1,
           null,
           null,
           null,
@@ -82,10 +81,10 @@
           null,
           null,
           1,
-          0,
-          0,
-          0,
-          0,
+          1,
+          1,
+          2,
+          1,
           null,
           null,
           null,
@@ -93,11 +92,11 @@
           null,
           null,
           1,
-          0,
+          10,
           null,
           null,
           1,
-          0,
+          7,
           null,
           null
         ]
@@ -110,7 +109,7 @@
           1,
           null,
           1,
-          11,
+          16,
           null,
           null
         ]
@@ -140,7 +139,8 @@
           null
         ]
       },
-      "/Users/lukeboat/Documents/Programing/AceBook_404/AceBook_404/acebook-404/app/models/album.rb": {
+      "/Users/student/acebook-2/acebook-404/app/models/album.rb": {
+    
         "lines": [
           null,
           null,
@@ -149,7 +149,7 @@
           null
         ]
       },
-      "/Users/lukeboat/Documents/Programing/AceBook_404/AceBook_404/acebook-404/app/models/post.rb": {
+      "/Users/student/acebook-2/acebook-404/app/models/post.rb": {
         "lines": [
           null,
           null,
@@ -161,7 +161,7 @@
           null
         ]
       },
-      "/Users/lukeboat/Documents/Programing/AceBook_404/AceBook_404/acebook-404/app/models/profile.rb": {
+      "/Users/student/acebook-2/acebook-404/app/models/profile.rb": {
         "lines": [
           null,
           null,
@@ -227,7 +227,7 @@
           null
         ]
       },
-      "/Users/lukeboat/Documents/Programing/AceBook_404/AceBook_404/acebook-404/app/controllers/profile_controller.rb": {
+      "/Users/student/acebook-2/acebook-404/app/controllers/profile_controller.rb": {
         "lines": [
           null,
           null,
@@ -235,13 +235,13 @@
           1,
           null,
           1,
-          14,
-          14,
+          19,
+          19,
           null,
           null
         ]
       }
     },
-    "timestamp": 1582288256
+    "timestamp": 1582294063
   }
 }
