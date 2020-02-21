@@ -33,7 +33,7 @@
           <a class="nav-link" href="#"> <%= link_to 'Back to Posts', posts_path %></a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="#"><%= link_to 'Random Profile' ,profile_path(rand(User.count))%></span></a>
+          <a class="nav-link" href="#"><%= link_to 'Random Profile' ,profile_path(rand(1..User.all.length))%></span></a>
         </li>
 
       </ul>
@@ -64,7 +64,7 @@
         <div class="shadow p-2 mb-4 bg-grey rounded">
           <div class="container" style="width: 100rem;">
             <div class="col-md-20 col-sm-30">
-              <h5 class="card-title"> <%=post.message[(0..8)].capitalize%></h5>
+              <h5 class="card-title"> <%=post.message.split[(0..3)].join(" ").capitalize%></h5>
               <p class="card-text">
                 <p><%= simple_format(post.message.gsub(/\n/, '<br/>')) %></p>
                 <p><%= post.created_at.strftime(" Posted on %d %B %a %I:%M%p") %> </p>
