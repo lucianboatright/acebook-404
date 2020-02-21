@@ -27,7 +27,7 @@
           <a class="nav-link" href="#"><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="#"><%= link_to 'Random Profile' ,profile_path(rand(User.all.length))%></span></a>
+          <a class="nav-link" href="#"><%= link_to 'Random Profile' ,profile_path(rand(1..User.all.length))%></span></a>
         </li>
       </ul>
 
@@ -58,11 +58,11 @@
       <div class="shadow p-2 mb-4 bg-grey rounded">
         <div class="container" style="width: 100rem;">
           <div class="col-md-20 col-sm-30">
-            <h5 class="card-title"> <%= post.message[(0..20)].capitalize%></h5>
+            <h5 class="card-title"> <%= post.message.split[(0..3)].join(" ").capitalize%></h5>
              <p class="card-text"> 
               <td> 
               <p><%= simple_format(post.message.gsub(/\n/, '<br/>'))%></p>
-                  <p><%= post.created_at.strftime(" Posted on %d %B %a %I:%M%p") %> </p> 
+                  <p><%= post.created_at.strftime(" Posted on %d %B %a %I:%M%p")%></p>
                    <p><%= post.user.email %><%= link_to profile_path(post.user) do %>
                 View Profile
                       <% end %>
