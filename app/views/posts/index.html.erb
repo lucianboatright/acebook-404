@@ -66,7 +66,7 @@
                    <p><%= post.user.email %><%= link_to profile_path(post.user) do %>
                 View Profile
                       <% end %>
-
+                      
                 <p><% if current_user && current_user == post.user %>
                       <%= link_to 'Delete', post, :confirm => 'Are you sure?',
                                             :method => :delete %> <%= link_to 'Edit', edit_post_path(post)%></p>

@@ -13,3 +13,41 @@
  *= require_tree .
  *= require_self
  */
+
+ body {
+     position: relative;
+ }
+
+ .thumb {
+     width: 100px;
+     height: 100px;
+ }
+
+ .album-container {
+     display: flex;
+     flex-direction: column;
+     position: relative;
+     width: 100%;
+ }
+
+ 
+ .image-container {
+    display: block;
+    position: relative;
+    min-width: 100%;
+}
+
+ 
+.images {
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+
+
+ 
+.link-container {
+    display: block;
+    position: relative;
+    width: 100%;
+}
