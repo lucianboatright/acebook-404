@@ -26,8 +26,11 @@
         <li class="nav-item">
           <a class="nav-link" href="#"><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></a>
         </li>
-        <li class="nav-item dropdown">
+        <li class="nav-item active">
+          <a class="nav-link" href="#"><%= link_to 'Random Profile' ,profile_path(rand(User.all.length))%></span></a>
         </li>
+      </ul>
+
       </ul>
 
     </div>
