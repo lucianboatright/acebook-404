@@ -21,9 +21,7 @@
     
 
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#"><%= link_to 'My Profile' ,profile_path(current_user)%></span></a>
-        </li>
+
         <li class="nav-item">
           <a class="nav-link" href="#"><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></a>
         </li>
@@ -31,9 +29,6 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#"> <%= link_to 'Back to Posts', posts_path %></a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="#"><%= link_to 'Random Profile' ,profile_path(rand(1..User.all.length))%></span></a>
         </li>
 
       </ul>
